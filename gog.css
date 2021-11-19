@@ -1,0 +1,28 @@
+.card {
+  margin: 10px;
+}
+.icon {
+  color: white;
+  font-size: 20px;
+  font-weight: 200;
+  /* text-decoration: none; */
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav span {
+  text-decoration: none;
+  color: white;
+  padding: 3px;
+}
+.btn {
+  border: none;
+  text-align: right;
+}
+.btn-offer {
+  background-color: purple;
+  color: white;
+  border: none;
+}

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/fontawesome.min.css" integrity="sha512-Rcr1oG0XvqZI1yv1HIg9LgZVDEhf2AHjv+9AuD1JXWGLzlkoKDVvE925qySLcEywpMAYA/rkg296MkvqBF07Yw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="gog.css" />
+    <title>gog.com</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#"><img height = 39 width =39 src="data:image/png;base64,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" ></img></a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                STORE
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">New Releases</a>
+                <a class="dropdown-item" href="#">Best Sellers</a>
+                <a class="dropdown-item" href="#">On Sale Now</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Adventure</a>
+                <a class="dropdown-item" href="#">Indie</a>
+                <a class="dropdown-item" href="#">RPG</a>
+                <a class="dropdown-item" href="#">Shooters</a>
+                <a class="dropdown-item" href="#">Simulation</a>
+                <a class="dropdown-item" href="#">Sports and Racing</a>
+                <a class="dropdown-item" href="#">Strategy</a>
+                <a class="dropdown-item" href="#">Movies for games</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Browse all games</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                ABOUT
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">GOG.com</a>
+                <a class="dropdown-item" href="#">GOG Galaxy</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Join the Team</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                COMMUNITY
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">All forums</a>
+                <a class="dropdown-item" href="#">General discussion forum</a>
+                <a class="dropdown-item" href="#">Forum replies</a>
+                <a class="dropdown-item" href="#">Community wishlist</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Facebook</a>
+                <a class="dropdown-item" href="#">Twitter</a>
+                <a class="dropdown-item" href="#">Twitch</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                SUPPORT
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Game technical issues</a>
+                <a class="dropdown-item" href="#">Orders and Payments</a>
+                <a class="dropdown-item" href="#">Accounts and website</a>
+                <a class="dropdown-item" href="#">Downloads</a>
+                <a class="dropdown-item" href="#">GOG Galaxy</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                SIGN IN
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <button>
+                  <a class="dropdown-item" href="#">CREATE ACCOUNT</a>
+                </button>
+                <button><a class="dropdown-item" href="#">SIGN IN</a></button>
+              </div>
+            </li>
+          </ul>
+  <a href="#"><i class="far fa-bell icon"></i><span class="text-muted"> 0 </span></a>
+<a href="#"><i class="bi bi-basket icon"></i><span  class="text-muted"> 0 </span></a>
+  <a href="#"><i class=" icon fa fa-fw fa-user"></i></a>      
+        </div>
+      </nav>
+    </div>
+    <div class="container">
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-ride="carousel"
+      >
+        <ol class="carousel-indicators">
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="/gog-assets/carousel1.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/gog-assets/carousel2.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/gog-assets/carousel3.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/gog-assets/carousel4.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/gog-assets/carousel5.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/gog-assets/carousel6.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-target="#carouselExampleIndicators"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-target="#carouselExampleIndicators"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </button>
+      </div>
+    </div>
+
+<!--CARDS-->
+
+<div class = "row mx-5">
+<div class = "col-md-3 d-flex justify-content-between">
+<div class="card" style="width: 18rem;margin: 10px">
+  <img src="/gog-assets/tile (1).jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">SOULSAGA</p>
+  <a href = "#" color = "black"> <i class="bi bi-apple"></i></a>
+    <button class = "btn ">$19.99</button>
+  </div>
+</div>
+</div>
+<!-- card1 -->
+<div class = "col-md-3 d-flex justify-content-between">
+<div class="card" style="width: 18rem;">
+  <img src="/gog-assets/tile (2).jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">DELUXE-EDITION ROLLERCOASTER TYCOON</p>
+    <a href = "#"> <i class="bi bi-apple"></i></a>
+    <a href = "#"> <i class="bi bi-windows"></i></a>
+
+<button class = "btn-offer ">-73%</button>
+    <button class = "btn ">$16.03</button>
+  </div>
+</div>
+</div>
+<!-- card -->
+<div class = "col-md-3 d-flex justify-content-between">
+<div class="card" style="width: 18rem;">
+  <img src="/gog-assets/tile (4).jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">SMART CITY PLAN</p>
+     <a href = "#"> <i class="bi bi-windows"></i></a>
+     <button class = "btn-offer ">-25%</button>
+<button class = "btn ">$14.99</button>
+  </div>
+</div>
+</div>
+<!-- card -->
+<div class = "col-md-3 d-flex justify-content-between">
+<div class="card" style="width: 18rem;">
+  <img src="/gog-assets/tile (6).jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">DISCO ELYSIUM</p>
+    <a href = "#"> <i class="bi bi-windows"></i></a>
+    <a href = "#"> <i class="bi bi-apple"></i></a>
+    <button class = "btn-offer ">-10%</button>
+    <button class = "btn ">$13.49</button>
+    
+  </div>
+</div>
+</div>
+<hr>
+<p>We are the GOG.com, the DRM-free home for a curated selection of games. This place was made for games, so make yourself at home.</p> <vr>
+The new GOG Galaxy 2.0.
+<hr>
+<!-- card -->
+
+</div>
+
+<!---cards row-2-->
+
+<div class = "row mx-5">
+<div class = "col-md-3 d-flex justify-content-between">
+<div class="card" style="width: 18rem;margin: 10px">
+  <img src="/gog-assets/tile (7).jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+</div>
+<!-- card -->
+<div class = "col-md-3 d-flex justify-content-between">
+<div class="card" style="width: 18rem;">
+  <img src="/gog-assets/tile (8).jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+</div>
+<!-- card -->
+<div class = "col-md-3 d-flex justify-content-between">
+<div class="card" style="width: 18rem;">
+  <img src="/gog-assets/tile (9).jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">BELDURS GATE-II</p>
+  </div>
+</div>
+</div>
+<!-- card -->
+<div class = "col-md-3 d-flex justify-content-between">
+<div class="card" style="width: 18rem;">
+  <img src="/gog-assets/tile (10).jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+</div>
+<!-- card -->
+
+</div>
+<!---Card Row 3-->
+
+<!-- card 1 -->
+<div class = "row mx-5">
+<div class = "col-md-3 d-flex justify-content-between">
+<div class="card" style="width: 18rem;margin: 10px">
+  <img src="/gog-assets/tile (11).jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+</div>
+<!-- card 2 -->
+<div class = "col-md-3 d-flex justify-content-between">
+<div class="card" style="width: 18rem;">
+  <img src="/gog-assets/tile (12).jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+</div>
+<!-- card 3-->
+<div class = "col-md-3 d-flex justify-content-between">
+<div class="card" style="width: 18rem;">
+  <img src="/gog-assets/tile (13).jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+</div>
+<!-- card 4-->
+<div class = "col-md-3 d-flex justify-content-between">
+<div class="card" style="width: 18rem;">
+  <img src="/gog-assets/tile (14).jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+</div>
+<!-- card -->
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
